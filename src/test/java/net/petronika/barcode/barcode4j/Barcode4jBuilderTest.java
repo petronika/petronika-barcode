@@ -14,39 +14,39 @@ public class Barcode4jBuilderTest {
 
 		output = new FileOutputStream(new File("barcode-1.png"));
 		new Barcode4jBuilder()
-			.build("1111111111", output);
+			.render("1111111111", output);
 		output.close();
 
 		output = new FileOutputStream(new File("barcode-2.png"));
 		new Barcode4jBuilder()
 			.type(Barcode4jBuilder.DEFAULT_TYPE)
 			.format(Barcode4jBuilder.DEFAULT_FORMAT)
-			.build("2222222222", output);
+			.render("2222222222", output);
 		output.close();
 
 		output = new FileOutputStream(new File("barcode-3.png"));
 		new Barcode4jBuilder()
 			.quietZone(Barcode4jBuilder.DISABLE_QUIET_ZONE)
-			.build("3333333333", output);
+			.render("3333333333", output);
 		output.close();
 
 		output = new FileOutputStream(new File("barcode-4.png"));
 		new Barcode4jBuilder()
 			.humanReadablePlacement(HumanReadablePlacement.HRP_NONE)
-			.build("4444444444", output);
+			.render("4444444444", output);
 		output.close();
 
 		output = new FileOutputStream(new File("barcode-5.png"));
 		new Barcode4jBuilder()
 			.humanReadablePlacement(HumanReadablePlacement.HRP_NONE)
 			.moduleWidth("0.5mm")
-			.build("5555555555", output);
+			.render("5555555555", output);
 		output.close();
 
 		output = new FileOutputStream(new File("barcode-6.png"));
 		new Barcode4jBuilder()
 			.type(BarcodeType.BARCODE_DATAMATRIX)
-			.build("6666666666", output);
+			.render("6666666666", output);
 		output.close();
 
 		output = new FileOutputStream(new File("barcode.png"));
@@ -63,7 +63,7 @@ public class Barcode4jBuilderTest {
 			.humanReadableSize("10pt")
 			.humanReadableFont("Helvetica")
 			.humanReadablePattern("__-__-__-__-__")
-			.build("0123456789", output);
+			.render("0123456789", output);
 		output.close();
 	}
 }

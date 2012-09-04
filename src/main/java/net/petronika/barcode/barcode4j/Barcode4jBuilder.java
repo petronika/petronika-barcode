@@ -47,7 +47,7 @@ public class Barcode4jBuilder {
 	 * @param value Barcode value 
 	 * @param out OutputStream to write to
 	 */
-	public void build(String value, OutputStream out) throws Exception {
+	public void render(String value, OutputStream out) throws Exception {
 		if ( value == null || value.isEmpty() ) {
 			throw new IllegalArgumentException("value");
 		}
